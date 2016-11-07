@@ -15,9 +15,16 @@ namespace WPFSampleEntities
         [Display (Name = "NOMBRE")]
         public String Nombre { get; set; }
         [Required]
+        [Display(Name = "APELLIDOS")]
         public String Apellidos { get; set; }
+        [Required]
+        [Display(Name = "FECHA DE NACIMIENTO")]
         public DateTime FechaNac { get; set; }
+        [Required]
+        [Display(Name = "DIRECCIÓN")]
         public String Direccion { get; set; }
+        [Required]
+        [Display(Name = "TELÉFONO")]
         public String Telefono { get; set; }
 
         //Constructores

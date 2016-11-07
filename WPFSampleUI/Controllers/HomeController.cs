@@ -30,6 +30,7 @@ namespace WPFSampleUI.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Create(clsPersona persona)
         {
@@ -56,5 +57,11 @@ namespace WPFSampleUI.Controllers
             }
 
         }
+
+        public ActionResult PaginaError()
+        {
+            return View();
+        }
+
     }
 }
