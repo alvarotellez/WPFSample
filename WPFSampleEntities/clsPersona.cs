@@ -12,6 +12,7 @@ namespace WPFSampleEntities
         //Atributos
         public int Id { get; set; }
         [Required]
+        [Display (Name = "NOMBRE")]
         public String Nombre { get; set; }
         [Required]
         public String Apellidos { get; set; }
