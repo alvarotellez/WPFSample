@@ -19,5 +19,12 @@ namespace WPFSampleBL.Manejadora
             return i;
 
         }
+
+        public int editarPersonaBL(clsPersona persona)
+        {
+            int i = new clsManejadoraPersonaDAL().updatePersonaDAL(persona);
+
+            return i;
+        }
     }
 }

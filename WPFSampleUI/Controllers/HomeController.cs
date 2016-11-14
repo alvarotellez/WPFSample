@@ -30,7 +30,7 @@ namespace WPFSampleUI.Controllers
         {
             return View();
         }
-
+        //CREAR UNA NUEVA PERSONA
         [HttpPost]
         public ActionResult Create(clsPersona persona)
         {
@@ -58,6 +58,42 @@ namespace WPFSampleUI.Controllers
 
         }
 
+        public ActionResult Edit()
+        {
+            return View();
+        }
+
+        //EDITAR LA PERSONM
+        [HttpPost]
+        public ActionResult Edit(clsPersona persona)
+        {
+
+            int i;
+            clsListadosBL lista = new clsListadosBL();
+            if (!ModelState.IsValid)
+            {
+                return View(persona);
+            }
+            else
+            {
+                try
+                {
+
+                    clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
+                    i = oManejadoraPersonaBL.editarPersonaBL(persona);
+
+                    clsListadosBL listadoPersona = new clsListadosBL();
+                    return View("Index", listadoPersona.getListadoPersonasBL());
+                }
+                catch (Exception)
+                {
+                    return View("paginaError");
+                }
+            }
+
+        }
+
+        //MOSTRAR PAGINA DE ERROR
         public ActionResult PaginaError()
         {
             return View();
