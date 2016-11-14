@@ -74,7 +74,7 @@ namespace WPFSampleDAL.Manejadora
             SqlConnection conexion = new SqlConnection();
             SqlCommand miComando = new SqlCommand();
             //Añadimos los datos del comando
-            miComando.Parameters.Add("@IDPersona", System.Data.SqlDbType.Int).Value = persona.IDPersona;
+            miComando.Parameters.Add("@IDPersona", System.Data.SqlDbType.Int).Value = persona.Id;
             miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = persona.Nombre;
             miComando.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar).Value = persona.Apellidos;
             miComando.Parameters.Add("@fechaNac", System.Data.SqlDbType.Date).Value = persona.FechaNac;
@@ -83,7 +83,7 @@ namespace WPFSampleDAL.Manejadora
             try
             {
                 conexion = miConexion.getConnection();
-                miComando.CommandText = "UPDATE PERSONAS SET nombre=@nombre,apellidos=@apellidos,fechaNac=@fechaNac,direccion=@direccion,telefono=@telefono WHERE IDPersona=@IDPersona";
+                miComando.CommandText = "UPDATE PERSONAS SET nombre=@nombre,apellidos=@apellidos,fechaNac=@fechaNac,direccion=@direccion,telefono=@telefono WHERE IDPersona=@id";
                 miComando.Connection = conexion;
                 //Resultado es el numero de personas afectadas
                 resultado = miComando.ExecuteNonQuery();

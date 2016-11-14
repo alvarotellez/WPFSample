@@ -25,6 +25,7 @@ namespace WPFSample_DAL
     {
         //Atributos
         public String dataBase { get; set; }
+        public String server { get; set; }
         public String user { get; set; }
         public String pass { get; set; }
         public String host { get; set; }
@@ -33,6 +34,7 @@ namespace WPFSample_DAL
 
         public clsMyConnection()
         {
+            this.server = 
             this.dataBase = "WPFSample";
             //El primer usuario es de de la base de datos del instituto, el segundo la de casa
             this.user = "prueba";
