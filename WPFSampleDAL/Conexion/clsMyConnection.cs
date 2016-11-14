@@ -38,7 +38,7 @@ namespace WPFSample_DAL
             this.user = "prueba";
             //this.user = "pruebaResident";
             this.pass = "123";
-            this.host = " 192.168.0.161";
+            this.host = "192.168.0.161";
 
         }
         //Con parámetros por si quisiera cambiar las conexiones
