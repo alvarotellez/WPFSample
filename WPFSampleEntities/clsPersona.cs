@@ -10,7 +10,7 @@ namespace WPFSampleEntities
     public class clsPersona
     {
         //Atributos
-        public int Id { get; set; }
+        public int IDPersona { get; set; }
         [Required]
         [Display (Name = "NOMBRE")]
         public String Nombre { get; set; }

@@ -55,9 +55,8 @@ namespace WPFSampleUI.Controllers
                     return View("paginaError");
                 }
             }
-
         }
-
+       
         public ActionResult Edit()
         {
             return View();
@@ -90,10 +89,9 @@ namespace WPFSampleUI.Controllers
                     return View("paginaError");
                 }
             }
-
         }
-
         //MOSTRAR PAGINA DE ERROR
+        
         public ActionResult PaginaError()
         {
             return View();
